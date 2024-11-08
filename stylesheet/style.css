@@ -1,0 +1,577 @@
+/*  START General */
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 69px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6, .nav-logo{
+    font-family: "Montserrat", sans-serif;
+}
+
+.bg-gray {
+    background: #f7f7f7;
+}
+:root{
+    --main-color:#343434;
+}
+
+/*  END General */
+
+/* START Nav */
+.nav-logo{
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: 800;
+}
+
+.navbar-brand:focus, .navbar-brand:hover{
+    color: #fff;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    color: #fff;
+    font-size: 14px;
+    padding: 0;
+    transition: all 0.3s ease-in;
+}
+
+.navbar-nav .nav-link.active{
+    position: relative;
+}
+
+.navbar-nav .nav-link.active::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: #fff;
+    animation: underline-effect 0.5s forwards;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+body:has(#about:target) nav,
+body:has(#services:target) nav,
+body:has(#portfolio:target) nav,
+body:has(#testimonials:target) nav,
+body:has(#team:target) nav,
+body:has(#contact:target) nav{
+    background-color: #212529;
+}
+/* END Nav */
+
+
+/* START Header */
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)) ,url(../images/bg.jpg);
+    background-position: 0px 0px;
+    background-size: cover;
+}
+
+.header-tittle h5{
+    font-size: 3.125rem;
+}
+
+.header-tittle h1{
+    font-weight: 200;
+    font-size: 4rem;
+    line-height: 1.2;
+    padding: 0.2em 0;
+}
+
+.header-tittle h1 span{
+    font-weight: 400;
+}
+
+.header-tittle li a{
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* END Header */
+
+/* START About */
+.about-left .inner .image{
+    position: relative;
+    padding: 0 0 0 30px;
+}
+
+.about-left .inner .image::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    width: 80%;
+    height: 80%;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.progress{
+    height: 25px;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+}
+
+.buttons button{
+    font-size: 13px;
+}
+
+.btn-dark{
+    background-color: #000000;
+}
+
+.btn-dark:hover{
+    background-color: transparent;
+    color: black;
+}
+
+.about-content h3{
+    position: relative;
+}
+
+.about-content h3::after{
+    content: ".";
+    position: absolute;
+}
+
+.about-content span{
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.about-content > p{
+    line-height: 1.6;
+    margin: 0;
+    font-size: 15px;
+    color: #748182;
+}
+/* END About */
+
+/* START Services */
+.logo-circuit{
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+    background-color: #f4f4f4;
+    font-size: 30px;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: all 0.5s;
+}
+
+.logo-circuit:hover{
+    background-color:#1C1C1C;
+    color: #fff;
+}
+
+.service-inner{
+    background-color: #fff;
+    padding: 2.5rem 1.3rem;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+
+.services-tittle > h3{
+    font-weight: 900;
+    font-size: 40px;
+    z-index: 4;
+    color: #333333;
+    position: relative;
+    display: inline-block;
+}
+
+.services-tittle > h3::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.services-cards h6{
+    margin-bottom: 15px;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.services-cards h6 + p{
+    font-size: 14px;
+    line-height: 1.6;
+    color: #748182;
+}
+
+/* END Services */
+
+/* START Portfoilo */
+.portfolio-tittle > h3{
+    font-weight: 900;
+    font-size: 40px;
+    z-index: 4;
+    color: #333333;
+    position: relative;
+    display: inline-block;
+}
+
+.portfolio-tittle > h3::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.portfolio-items .inner{
+    position: relative;
+}
+
+.portfolio-items .inner .image-overly{
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    right: 5px;
+    left: 5px;
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: all 0.5s;
+    transform: translateY(10px);
+    opacity: 0;
+}
+
+.portfolio-items .inner .image-overly:hover{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.portfolio-items .inner .image-overly h6{
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    transform: translateY(-15px);
+    transition: all 0.5s;
+}
+
+.portfolio-items .inner .image-overly:hover h6{
+    transform: translateY(0);
+}
+
+.portfolio-items .inner .image-overly .overly-icons a i{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    border-radius: 50%;
+    border: 1px solid #111;
+    background: #111;
+    color: #eee;
+    text-align: center;
+    font-size: 13px;
+}
+
+.portfolio-items .inner .image-overly .overly-icons a:hover i{
+    background-color: #eee;
+    color:#111 ;
+}
+
+.nav-item button{
+    color: #222;
+    font-weight: 700;
+    font-size: 16px;
+    position: relative;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    background-color: transparent;
+    color: #222;
+    position: relative;
+}
+
+.nav-pills .nav-link.active::after, .nav-pills .show > .nav-link::after{
+    background-color: #222;
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: 5px;
+    left: 50%; 
+    animation: underline-effect2 0.5s forwards;
+    transform: translateX(-50%);
+}
+
+.nav-link:focus, .nav-link:hover{
+    color: #222;
+}
+/* END Portfoilo */
+
+
+/* START Testimonials */
+.testimonials-tittle > h3{
+    font-weight: 900;
+    font-size: 40px;
+    z-index: 4;
+    color: #333333;
+    position: relative;
+    display: inline-block;
+}
+
+.testimonials-tittle > h3::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.carousel-inner .carousel-item img{
+    width: 90px;
+    height: 90px;
+    margin: 0 auto ;
+}
+
+.carousel-inner .carousel-item > p{
+    line-height: 1.6;
+    margin: 0 auto;
+    font-size: 15px;
+    color: #748182;
+    word-spacing: 2px;
+    width: 75%;
+}
+
+.carousel-inner .carousel-item > h6{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.carousel-inner .carousel-item > span{
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+}
+
+.carousel-indicators [data-bs-target]{
+    background-color: #d6d6d6;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.carousel-item{
+    margin-bottom: 60px;
+}
+/* END Testimonials */
+
+
+/* START Counter */
+.counter-details > i{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.counter-details > h3{
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.counter-details > p{
+    font-weight: 600;
+    line-height: 1.6;
+    font-size: 15px;
+    color: #748182;
+}
+/* END Counter */
+
+
+/* START Team */
+.team-tittle > h3{
+    font-weight: 900;
+    font-size: 40px;
+    z-index: 4;
+    color: #333333;
+    position: relative;
+    display: inline-block;
+}
+
+.team-tittle > h3::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.card-body > h5{
+    text-transform: uppercase;
+}
+
+.card-image img{
+    transition: all 0.4s ease 0s;
+}
+
+.card-image:hover img{
+    transform: scale(1.2);
+}
+
+.card-image{
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image .card-overlay{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    left: 5px;
+    bottom: 5px;
+    opacity: 0;
+    transition: 0.5s;
+    transform: rotateY(180deg) scale(0.5, 0.5);
+}
+
+.card-image:hover .card-overlay{
+    opacity: 1;
+    transform: rotateY(0) scale(1, 1);
+}
+
+.card-image .card-overlay ul li a{
+    border: 1px solid #000;
+    color: #fff;
+    background-color: #000;
+    display: block;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.card-image .card-overlay ul li a:hover{
+    color: #000;
+    background-color: #fff;
+}
+/* End Team */
+
+
+/* START Contact */
+.contact-tittle > h3{
+    font-weight: 900;
+    font-size: 40px;
+    z-index: 4;
+    color: #333333;
+    position: relative;
+    display: inline-block;
+}
+
+.contact-tittle > h3::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+#contact .inner > i{
+    margin-bottom: 15px;
+    font-size: 25px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+#contact .inner > i:hover{
+    background: #1C1C1C;
+    color: #EEEEEE;
+}
+
+#contact .inner > h6{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#contact .inner > p{
+    line-height: 1.6;
+    font-size: 15px;
+    color: #748182;
+}
+
+form .row input, form .row textarea{
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    background: #f4f4f4;
+    outline: none;
+}
+
+.input-button{
+    padding: 10px 40px;
+    background: #1c1c1c;
+    color: #eee;
+    border: 1px solid #1c1c1c;
+    border-radius: 5px;
+    font-size: 13px;
+    transition: all 0.5s;
+}
+
+.input-button:hover{
+    background: #eee;
+    color: #1c1c1c;
+}
+/* End Contact */
+
+
+/* START Footer */
+footer .container p{
+    font-size: 13px;
+    line-height: 1.6;
+    color: #748182;
+}
+/* END Footer */
